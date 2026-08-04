@@ -1,16 +1,13 @@
-import java.util.*;
 class Solution {
-    public static boolean isPowerOfTwo(int n) {
-        int i=0;
-        for(i=0;i<31;i++){
-             int x = (int)Math.pow(2,i);
-             if(n==x) return true;
-            }
-        return false;
-    }
-    public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        isPowerOfTwo(n);
+    public boolean isPowerOfTwo(int n) {
+        
+        if(n<=0){
+            return false;
+        }
+
+        return (n&(n-1))==0;    // logic is n=4
+                                // 4 = 100, 3=011 if we do and of 4&3 we will get 0 
+                                // n = 8  8=1000 7=0111 8&7=0 so n&(n-1)=0 for pow of 2
+
     }
 }
