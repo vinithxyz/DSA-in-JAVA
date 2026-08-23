@@ -6,9 +6,13 @@ class Solution {
             int currSum = 0;
             for(int j=0;j<accounts[0].length;j++){
                 currSum+=accounts[i][j];
-                max = Math.max(max,currSum);
+              //  max = Math.max(max,currSum);
             }
+             if(currSum>=max){
+                 max = currSum;
+                }
         }
+       
         return max;
     }
 }
