@@ -6,7 +6,7 @@ class Solution {
         for(int i=0;i<sentences.length;i++){
             count = 0;
             ans = sentences[i];
-            for(int j=0;j<sentences[i].length();j++){
+            for(int j=0;j<ans.length();j++){
                 if(ans.charAt(j)== ' '){
                     count++;
                 }
