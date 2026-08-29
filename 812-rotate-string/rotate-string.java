@@ -3,9 +3,9 @@ class Solution {
         if(s.length() != goal.length()){
             return false;
         }
-        String double_string = s + s;
+        String double_string = s + s;   // add s + s and check if s and goal contains same characters.
 
-        return double_string.contains(goal);
+        return double_string.contains(goal); // check substring. if double string contains goal.
         
     }
 }
