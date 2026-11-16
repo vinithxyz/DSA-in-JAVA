@@ -1,25 +1,16 @@
-import java.util.*;
 class Solution {
-    public static int[] twoSum(int[] nums, int target) {
-        for(int i=0;i<nums.length;i++){
-            for(int j=i+1;j<nums.length;j++){
-                
-                if(target == nums[i] + nums[j]){
+    public int[] twoSum(int[] nums, int target) {
+        
+        for(int i=0;i<nums.length-1;i++){
+            int sum = 0;
+           for(int j=i+1;j<nums.length;j++){
+                sum = nums[i] + nums[j];
+
+                if(sum==target){
                     return new int[] {i,j};
                 }
-            }
+           }
         }
-        return new int[0];
-        
-    }
-    public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
-        int target = sc.nextInt();
-        int n = sc.nextInt();
-        int nums[] = new int[n];
-        for(int i=0;i<n;i++){
-            nums[i]=sc.nextInt();
-        }
-        twoSum(nums,target);
+        return new int[] {-1,-1};
     }
 }
